@@ -21,7 +21,7 @@ public class Pdf {
         Document document = new Document();
         document.setMargins(0, 0, 0, 0);
         var tp = twoPagesList.get(0);
-        var writer = PdfWriter.getInstance(document, new FileOutputStream(filePath + "pdf.pdf"));
+        var writer = PdfWriter.getInstance(document, new FileOutputStream(filePath + directory + "/" + directory + ".pdf"));
         document.open();
         for (TwoPages twoPages : twoPagesList) {
             var bufferedImageA = twoPages.getBufferedImageA();
